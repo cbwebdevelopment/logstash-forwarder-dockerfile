@@ -11,11 +11,11 @@ cat << EOF > /tmp/config.json
   },
   "files": [
     {
-      "paths": [ "/tmp/feeds/fifofeed" ],
-      "fields": { "type": "stdin" }
+      "paths": [ "/dev/log" ],
+      "fields": { "type": "devlog" }
     }
   ]
 }
 EOF
 
-/opt/logstash-forwarder/bin/logstash-forwarder -config /tmp/config.json
+/opt/lumberjack/bin/lumberjack -config /tmp/config.json
