@@ -11,8 +11,8 @@ cat << EOF > /tmp/config.json
   },
   "files": [
     {
-      "paths": [ "/dev/log" ],
-      "fields": { "type": "devlog" }
+      "paths": [ "/tmp/feeds/fifofeed" ],
+      "fields": { "type": "stdin" }
     }
   ]
 }
