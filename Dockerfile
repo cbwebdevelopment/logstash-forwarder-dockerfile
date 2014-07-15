@@ -35,7 +35,7 @@ RUN dpkg -i /tmp/logstash-forwarder/*.deb
 RUN rm -rf /tmp/*
 
 # Add FIFO
-#RUN mkdir /tmp/feeds/ && mkfifo /tmp/feeds/fifofeed
+RUN mkdir /tmp/feeds/ && mkfifo /tmp/feeds/fifofeed
 
 ADD run.sh /usr/local/bin/run.sh
 RUN chmod 755 /usr/local/bin/run.sh
