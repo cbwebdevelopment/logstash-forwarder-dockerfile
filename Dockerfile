@@ -13,7 +13,7 @@ RUN apt-get update
 
 # install deps (do not install go via debian packages)
 RUN apt-get install -y wget git ruby ruby-dev rubygems irb ri rdoc build-essential libssl-dev zlib1g-dev 
-RUN apt-get install -y libopenssl-ruby1.9
+RUN apt-get install -y libopenssl-ruby1.9.0+20071016-1
 
 #Get GO 1.2.2 binary (as 1.3 is the only available in sid ... and 1.3 isn't OK with SSL Certs cf. https://github.com/elasticsearch/logstash-forwarder/pull/217)
 RUN wget -q "http://golang.org/dl/go1.2.2.linux-amd64.tar.gz" -O /tmp/go.tar.gz
